@@ -2,26 +2,23 @@ package com.example.spaceapp;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.widget.TextView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-public class BaseFunctionality extends AppCompatActivity {
+public class TimerClass extends AppCompatActivity {
+    private TextView timerText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_base_functionality);
 
-        TextView timerText = findViewById(R.id.timer_text);
+        setContentView(R.layout.activity_timer_class);
+        timerText = findViewById(R.id.time_text);
+
         long duration = TimeUnit.MINUTES.toMillis(1);  // 1 minute
         long ticksInterval = 1000;  // Update interval set to every second for simplicity
 
