@@ -1,5 +1,6 @@
 package com.example.spaceapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -28,6 +29,9 @@ public class SpaceMissionsActivity extends AppCompatActivity {
     private TextView timerText, questionText, progressText;
     private ProgressBar progressBar;
     private CountDownTimer timer;
+    private int score = 0;
+    private int correctAnswers = 0;
+    private int incorrectAnswers = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +132,7 @@ public class SpaceMissionsActivity extends AppCompatActivity {
             startTimer();  // Start the timer as soon as the question is displayed
         } else {
             Toast.makeText(this, "Quiz Completed!", Toast.LENGTH_SHORT).show();
-            finish();
+            displayFinalScore();
         }
     }
     private void resetOptionsColors() {
@@ -139,13 +143,28 @@ public class SpaceMissionsActivity extends AppCompatActivity {
     }
 
     private void nextQuestion() {
+        int selectedOption = options.getCheckedRadioButtonId();
+        if (selectedOption != -1)
+        {
+            Question currentQuestion = questionsList.get(currentQuestionIndex);
+            if (selectedOption == currentQuestion.getCorrectAnswerIndex()) {
+                score += 10;
+                correctAnswers++;
+            } else {
+                incorrectAnswers++;
+            }
+        } else {
+            // If no option is selected, treat as incorrect
+            incorrectAnswers++;
+        }
+
         currentQuestionIndex++;
         if (currentQuestionIndex < questionsList.size()) {
             new Handler().postDelayed(this::displayQuestion, 2000);
 //            displayQuestion();
         } else {
             Toast.makeText(this, "Quiz Completed!", Toast.LENGTH_SHORT).show();
-            finish();
+            displayFinalScore();
         }
     }
     private void updateProgress() {
@@ -155,6 +174,22 @@ public class SpaceMissionsActivity extends AppCompatActivity {
         if (progressText != null) {
             progressText.setText("Question " + (currentQuestionIndex + 1) + " of " + questionsList.size());
         }
+    }
+
+    private void displayFinalScore() {
+        // Stop the timer if it's running
+        if (timer != null) {
+            timer.cancel();
+        }
+
+        // Create a summary message
+        Intent intent = new Intent(this, ResultsActivity.class);
+        intent.putExtra("score", score);
+        intent.putExtra("correctAnswers", correctAnswers);
+        intent.putExtra("incorrectAnswers", incorrectAnswers);
+        intent.putExtra("totalQuestions", questionsList.size());
+        startActivity(intent);
+        finish();
     }
 
 }

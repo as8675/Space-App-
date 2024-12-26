@@ -47,13 +47,14 @@
 
     <TextView
         android:id="@+id/app_title"
-        android:layout_width="136dp"
-        android:layout_height="38dp"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
         android:layout_marginTop="32dp"
         android:text="Space Quiz"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +65,7 @@
         android:layout_width="174dp"
         android:layout_height="162dp"
         android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:padding="10sp"
         app:cardBackgroundColor="#218CE4"
         app:cardCornerRadius="20dp"
@@ -75,7 +76,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351"
+        app:layout_constraintVertical_bias="0.405"
         tools:ignore="MissingConstraints">
 
         <!-- Inner Container -->
@@ -120,10 +121,10 @@
         app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toEndOf="@+id/card_exploration"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351"
+        app:layout_constraintVertical_bias="0.402"
         tools:ignore="MissingConstraints">
 
         <!-- Inner Container -->
@@ -168,7 +169,7 @@
         app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/card_astronaut"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_exploration"
         app:layout_constraintVertical_bias="0.0"
@@ -210,7 +211,7 @@
         android:layout_width="174dp"
         android:layout_height="162dp"
         android:layout_margin="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         app:cardBackgroundColor="#009688"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
@@ -246,9 +247,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/alata"
                 android:gravity="center"
                 android:text="Astronauts"
-                android:fontFamily="@font/alata"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -258,13 +259,14 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
+        android:padding="5sp"
         android:text="Categories"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/card_exploration"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent" />
 
 
