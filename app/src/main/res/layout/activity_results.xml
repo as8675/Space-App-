@@ -33,4 +33,12 @@
         android:layout_height="wrap_content"
         android:text="Accuracy: 0%"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/main_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Menu"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
 </LinearLayout>
