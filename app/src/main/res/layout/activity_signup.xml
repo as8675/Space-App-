@@ -65,7 +65,7 @@
                 android:padding="8dp"
                 android:drawablePadding="16dp"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:drawableStart="@mipmap/email"
                 android:layout_marginTop="32dp"
                 android:layout_marginStart="32dp"
@@ -82,7 +82,7 @@
                 android:padding="8dp"
                 android:drawablePadding="16dp"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:drawableStart="@mipmap/password"
                 android:layout_marginTop="32dp"
                 android:layout_marginStart="32dp"
@@ -99,7 +99,7 @@
                 android:padding="8dp"
                 android:drawablePadding="16dp"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:drawableStart="@mipmap/password"
                 android:layout_marginTop="32dp"
                 android:layout_marginStart="32dp"
@@ -108,7 +108,7 @@
                 />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/submit"
                 android:layout_width="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="16sp"
@@ -116,7 +116,7 @@
                 app:srcCompat="@mipmap/btn_login" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Already have an account? Signup"
