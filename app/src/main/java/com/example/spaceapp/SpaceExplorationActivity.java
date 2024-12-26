@@ -3,6 +3,7 @@ package com.example.spaceapp;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -24,7 +25,8 @@ public class SpaceExplorationActivity extends AppCompatActivity {
     private RadioGroup options;
     private List<Question> questionsList;
     private int currentQuestionIndex = 0;
-    private TextView timerText, questionText;
+    private TextView timerText, questionText, progressText;
+    private ProgressBar progressBar;
     private CountDownTimer timer;
 
     @Override
@@ -34,9 +36,15 @@ public class SpaceExplorationActivity extends AppCompatActivity {
 
         timerText = findViewById(R.id.timer_text);
         questionText = findViewById(R.id.question_text);
-        options = findViewById(R.id.options_radio_group); // Make sure this ID is in your layout
+        options = findViewById(R.id.options_radio_group);
+        progressBar = findViewById(R.id.progress_bar);
+        progressText = findViewById(R.id.progress_text);
 
         loadQuestions();
+
+        if (progressBar != null)
+            progressBar.setMax(questionsList.size());
+
         displayQuestion();
         startTimer();
     }
@@ -116,6 +124,7 @@ public class SpaceExplorationActivity extends AppCompatActivity {
 
                 options.addView(radioButton);
             }
+            updateProgress();
             startTimer();  // Start the timer as soon as the question is displayed
         } else {
             Toast.makeText(this, "Quiz Completed!", Toast.LENGTH_SHORT).show();
@@ -133,10 +142,18 @@ public class SpaceExplorationActivity extends AppCompatActivity {
         currentQuestionIndex++;
         if (currentQuestionIndex < questionsList.size()) {
             new Handler().postDelayed(this::displayQuestion, 2000);
-//            displayQuestion();
         } else {
             Toast.makeText(this, "Quiz Completed!", Toast.LENGTH_SHORT).show();
             finish();
+        }
+    }
+
+    private void updateProgress() {
+        if (progressBar != null) {
+            progressBar.setProgress(currentQuestionIndex + 1);
+        }
+        if (progressText != null) {
+            progressText.setText("Question " + (currentQuestionIndex + 1) + " of " + questionsList.size());
         }
     }
 }
