@@ -34,11 +34,21 @@
         android:text="Accuracy: 0%"
         android:textSize="18sp" />
 
+    <!-- Retake Quiz Button -->
     <Button
         android:id="@+id/main_menu_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Main Menu"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Main Menu" />
+
+    <!-- Retake Quiz Button -->
+    <Button
+        android:id="@+id/retake_quiz_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp" />
 </LinearLayout>

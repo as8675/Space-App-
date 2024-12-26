@@ -19,6 +19,8 @@ public class ResultsActivity extends AppCompatActivity {
          incorrectText = findViewById(R.id.incorrect_text);
          accuracyText = findViewById(R.id.accuracy_text);
          Button mainMenuButton = findViewById(R.id.main_menu_button);
+         Button retakeQuizButton = findViewById(R.id.retake_quiz_button);
+
 
         // Get data from intent
         int score = getIntent().getIntExtra("score", 0);
@@ -35,6 +37,13 @@ public class ResultsActivity extends AppCompatActivity {
         // Navigate back to the main menu
         mainMenuButton.setOnClickListener(v -> {
             Intent intent = new Intent(ResultsActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        });
+
+        retakeQuizButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ResultsActivity.this, AstronautsActivity.class); // Change to the specific quiz activity
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
