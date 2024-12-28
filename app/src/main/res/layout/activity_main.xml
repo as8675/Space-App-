@@ -5,17 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <View
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/header_background"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:background="@drawable/home_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#142f60"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/home_page_animation" />
 
     <GridLayout
         android:id="@+id/category_grid"
@@ -32,31 +36,31 @@
 
     <!-- CARDS-->
 
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Hello Michael"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_title" />
+<!--    <TextView-->
+<!--        android:id="@+id/welcome_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="Hello Michael"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.488"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/app_title" />-->
 
     <TextView
         android:id="@+id/app_title"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="4dp"
         android:text="Space Quiz"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/white"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/header_background" />
 
@@ -65,7 +69,7 @@
         android:layout_width="174dp"
         android:layout_height="162dp"
         android:layout_margin="16dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:padding="10sp"
         app:cardBackgroundColor="#218CE4"
         app:cardCornerRadius="20dp"
@@ -76,7 +80,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405"
+        app:layout_constraintVertical_bias="0.467"
         tools:ignore="MissingConstraints">
 
         <!-- Inner Container -->
@@ -124,7 +128,7 @@
         app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toEndOf="@+id/card_exploration"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402"
+        app:layout_constraintVertical_bias="0.469"
         tools:ignore="MissingConstraints">
 
         <!-- Inner Container -->
@@ -259,22 +263,22 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:padding="5sp"
         android:text="Categories"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/card_exploration"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/logout_button"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/background_btn"
         android:backgroundTint="#E1A500"
         android:text="Logout"
@@ -283,8 +287,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
