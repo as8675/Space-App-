@@ -30,12 +30,6 @@
             android:name=".BaseFunctionality"
             android:exported="false" />
         <activity
-            android:name=".TimerClass"
-            android:exported="false" />
-        <activity
-            android:name=".CountDownTimer"
-            android:exported="false" />
-        <activity
             android:name=".AstronautsActivity"
             android:exported="false" />
         <activity

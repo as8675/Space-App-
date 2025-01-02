@@ -3,62 +3,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_gradient"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/score_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Score: 0"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/correct_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Correct Answers: 0"
-        android:textSize="18sp" />
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Quiz Result"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/incorrect_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Incorrect Answers: 0"
-        android:textSize="18sp" />
+        <!-- Results Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <TextView
-        android:id="@+id/accuracy_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Accuracy: 0%"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/score_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score: 0"
+                android:textColor="@color/primary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    <!-- Main Menu Button -->
-    <Button
-        android:id="@+id/main_menu_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:text="Main Menu" />
+            <TextView
+                android:id="@+id/correct_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct Answers: 0"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
-    <!-- Retake Quiz Button -->
-    <Button
-        android:id="@+id/retake_quiz_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Restart"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/incorrect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incorrect Answers: 0"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
-    <!-- Share Results Button -->
-    <Button
-        android:id="@+id/share_results_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share Results"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/accuracy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accuracy: 0%"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <!-- Main Menu Button -->
+        <Button
+            android:textStyle="bold"
+            android:id="@+id/main_menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#E1A500"
+            android:text="Main Menu"
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+
+        <!-- Retake Quiz Button -->
+        <Button
+            android:id="@+id/retake_quiz_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/primary"
+            android:text="Retake Quiz"
+            android:textStyle="bold"
+            android:textSize="18sp"
+
+            android:textColor="@android:color/white" />
+
+        <!-- Share Results Button -->
+        <Button
+            android:id="@+id/share_results_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/secondary"
+
+            android:text="Share Results"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Default State -->
+    <item android:state_enabled="true">
+        <shape>
+            <gradient
+                android:startColor="#304B8A"
+                android:endColor="#10244D"
+                android:angle="45" />
+        </shape>
+    </item>
+
+    <!-- Disabled State -->
+    <item android:state_enabled="false">
+        <shape>
+            <gradient
+                android:startColor="#FFBDBDBD"
+                android:endColor="#FF757575"
+                android:angle="45" />
+        </shape>
+    </item>
+</selector>

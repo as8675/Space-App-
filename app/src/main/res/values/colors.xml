@@ -2,4 +2,32 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary">#E1A500</color>
+    <color name="secondary">#3F51B5</color>
+    <color name="text_secondary">#757575</color>
+
+    <color name="colorPrimary">#6200EE</color> <!-- Dark Blue -->
+    <color name="colorPrimaryVariant">#3700B3</color> <!-- Variant -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- White text -->
+
+    <!-- Secondary/Accent Color -->
+    <color name="colorAccent">#03DAC5</color> <!-- Teal -->
+    <color name="colorOnAccent">#000000</color> <!-- Black text -->
+
+    <!-- Background Colors -->
+    <color name="colorBackground">#121212</color> <!-- Dark background -->
+    <color name="colorSurface">#1E1E1E</color> <!-- Slightly lighter surface -->
+    <color name="colorOnBackground">#FFFFFF</color> <!-- White text on background -->
+
+    <!-- Error Colors -->
+    <color name="colorError">#CF6679</color> <!-- Pinkish Red -->
+    <color name="colorOnError">#FFFFFF</color> <!-- White text on error -->
+
+    <!-- Option Text -->
+    <color name="optionUnselected">#FFFFFF</color> <!-- White -->
+    <color name="optionSelected">#2ECC71</color> <!-- Green -->
+
+    <!-- Custom Progress Indicator -->
+    <color name="progressTrack">#424242</color> <!-- Dark Grey -->
+    <color name="progressIndicator">#03DAC5</color> <!-- Teal -->
 </resources>

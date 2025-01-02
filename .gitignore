@@ -33,3 +33,6 @@ captures/
 
 # Exclude SDK settings
 /local.properties
+
+#Exclude API Key
+keys.properties
