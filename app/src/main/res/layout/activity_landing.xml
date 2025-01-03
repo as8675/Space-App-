@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Landing">
+    tools:context="com.ayush.spacequiz.Landing">
 
     <ImageView
         android:id="@+id/imageView8"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="4dp"
-        android:text="Space App"
+        android:text="Space Quiz"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Your all in one app"
+        android:text="Explore the Universe, One Quiz at a Time!"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

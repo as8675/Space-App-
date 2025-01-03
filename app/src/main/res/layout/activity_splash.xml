@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#142f60"
-    tools:context=".SplashActivity">
+    tools:context="com.ayush.spacequiz.SplashActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="match_parent"

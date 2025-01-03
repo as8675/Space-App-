@@ -16,25 +16,19 @@ plugins {
 }
 
 android {
-    namespace = "com.example.spaceapp"
+    namespace = "com.ayush.spacequiz"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.spaceapp"
+        applicationId = "com.ayush.spacequiz"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         // Add BuildConfig field for API_KEY
         buildConfigField("String", "API_KEY", "\"Bearer ${keysProperties["apiKey"]}\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-        val apiKey = keysProperties["apiKey"] ?: "default_value"
-        println("Loaded API Key: $apiKey") // Debug line
-        buildConfigField("String", "API_KEY", "\"Bearer $apiKey\"")
-
-        println("keysFile absolute path: ${keysFile.absolutePath}")
     }
 
     buildFeatures {
@@ -44,6 +38,11 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+    buildTypes {
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("debug")
+        }
     }
 }
 

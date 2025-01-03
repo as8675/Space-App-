@@ -15,37 +15,37 @@
         android:theme="@style/Theme.SpaceApp"
         tools:targetApi="31">
         <activity
-            android:name=".Login"
+            android:name="com.ayush.spacequiz.Login"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name="com.ayush.spacequiz.SignUp"
             android:exported="false" />
         <activity
-            android:name=".Landing"
+            android:name="com.ayush.spacequiz.Landing"
             android:exported="false" />
         <activity
-            android:name=".ResultsActivity"
+            android:name="com.ayush.spacequiz.ResultsActivity"
             android:exported="false" />
         <activity
-            android:name=".BaseFunctionality"
+            android:name="com.ayush.spacequiz.BaseFunctionality"
             android:exported="false" />
         <activity
-            android:name=".AstronautsActivity"
+            android:name="com.ayush.spacequiz.AstronautsActivity"
             android:exported="false" />
         <activity
-            android:name=".SolarSystemActivity"
+            android:name="com.ayush.spacequiz.SolarSystemActivity"
             android:exported="false" />
         <activity
-            android:name=".SpaceExplorationActivity"
+            android:name="com.ayush.spacequiz.SpaceExplorationActivity"
             android:exported="false" />
         <activity
-            android:name=".SpaceMissionsActivity"
+            android:name="com.ayush.spacequiz.SpaceMissionsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.ayush.spacequiz.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.ayush.spacequiz.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

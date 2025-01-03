@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:animateLayoutChanges="true"
-    tools:context=".AstronautsActivity">
+    tools:context="com.ayush.spacequiz.AstronautsActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/progress_card"
