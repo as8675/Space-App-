@@ -23,12 +23,12 @@ android {
         applicationId = "com.ayush.spacequiz"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
+        versionCode = 6
         versionName = "1.1"
 
         // Add BuildConfig field for API_KEY
-        buildConfigField("String", "API_KEY", "\"Bearer ${keysProperties["apiKey"]}\"")
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        val apiKey = keysProperties.getProperty("apiKey")?: "API_KEY_NOT_FOUND"
+        buildConfigField("String", "API_KEY", "\"Bearer $apiKey\"")
     }
 
     buildFeatures {
@@ -42,6 +42,8 @@ android {
     buildTypes {
         getByName("release") {
             signingConfig = signingConfigs.getByName("debug")
+            val apiKey = keysProperties.getProperty("apiKey")?: "API_KEY_NOT_FOUND"
+            buildConfigField("String", "API_KEY", "\"Bearer $apiKey\"")
         }
     }
 }

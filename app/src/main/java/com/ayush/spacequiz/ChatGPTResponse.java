@@ -18,8 +18,10 @@ public class ChatGPTResponse {
 
     public String getContent() {
         if (choices != null && !choices.isEmpty() && choices.get(0).message != null) {
-            return choices.get(0).message.content;
+            String content = choices.get(0).message.content;
+            return content.trim();
         }
+        System.err.println("Error: ChatGPT response is empty or malformed!");
         return null;
     }
 }

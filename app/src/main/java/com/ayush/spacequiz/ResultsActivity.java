@@ -48,7 +48,26 @@ public class ResultsActivity extends AppCompatActivity {
         });
 
         retakeQuizButton.setOnClickListener(v -> {
-            Intent intent = new Intent(ResultsActivity.this, AstronautsActivity.class); // Change to the specific quiz activity
+            Class<?> activityClass = MainActivity.class; // default fallback
+            String className = getIntent().getStringExtra("activityClass");
+
+            if (className != null) {
+                switch (className) {
+                    case "AstronautsActivity":
+                        activityClass = AstronautsActivity.class;
+                        break;
+                    case "SpaceMissionsActivity":
+                        activityClass = SpaceMissionsActivity.class;
+                        break;
+                    case "SolarSystemActivity":
+                        activityClass = SolarSystemActivity.class;
+                        break;
+                    case "SpaceExplorationActivity":
+                        activityClass = SpaceExplorationActivity.class;
+                        break;
+                }
+            }
+            Intent intent = new Intent(ResultsActivity.this, activityClass); // Change to the specific quiz activity
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
@@ -66,6 +85,5 @@ public class ResultsActivity extends AppCompatActivity {
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
             startActivity(Intent.createChooser(shareIntent, "Share your quiz results"));
         });
-
     }
 }

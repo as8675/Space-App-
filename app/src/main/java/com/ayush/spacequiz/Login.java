@@ -1,6 +1,7 @@
 package com.ayush.spacequiz;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.EditText;
@@ -24,6 +25,9 @@ public class Login extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+        super.onStart();
+        SharedPreferences prefs = getSharedPreferences("AppPrefs", MODE_PRIVATE);
+        boolean rememberMe = prefs.getBoolean("rememberMe", false);
         // Check if user is already logged in
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {

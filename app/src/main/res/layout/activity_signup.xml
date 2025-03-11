@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#142f60"
+    android:background="#1C1C1D"
     tools:context="com.ayush.spacequiz.Login">
 
     <ImageView
@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="100dp"
                 android:text="Create Account"
                 android:textColor="@color/white"
@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittext_background"
                 android:drawableStart="@mipmap/name"
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittext_background"
                 android:drawableStart="@mipmap/email"
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittext_background"
                 android:drawableStart="@mipmap/password"
@@ -95,7 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittext_background"
                 android:drawableStart="@mipmap/password"
@@ -107,20 +107,30 @@
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
 
+            <CheckBox
+                android:id="@+id/checkBox_remember_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="Remember Me"
+                android:textColor="@color/white" />
+
             <ImageView
                 android:id="@+id/submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="16sp"
+                android:layout_marginTop="2dp"
                 app:srcCompat="@mipmap/btn_login" />
 
             <TextView
                 android:id="@+id/signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Already have an account? Signup"
+                android:layout_marginTop="5dp"
+                android:text="Already have an account? Sign In"
                 android:textAlignment="center"
                 android:textColor="#E1A500"
                 android:textStyle="bold" />

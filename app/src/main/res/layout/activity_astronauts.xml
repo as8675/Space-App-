@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:animateLayoutChanges="true"
+    android:background="@drawable/space_bg"
     tools:context="com.ayush.spacequiz.AstronautsActivity">
+
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/progress_card"
@@ -21,7 +23,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorSurface"
+            android:background="#D5141212"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -30,17 +32,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alata"
-                android:textColor="#3F51B5"
+                android:textColor="#dce1de"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:text="Question 1 of 10" />
+                tools:text="Question 1 of 5" />
 
             <TextView
                 android:id="@+id/timer_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alata"
-                android:textColor="?attr/colorError"
+                android:textColor="#49a078"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 tools:text="00:30" />
@@ -48,12 +50,12 @@
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/progress_bar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:layout_marginTop="8dp"
                 android:progress="30"
-                android:progressBackgroundTint="#3F51B5"
-                app:indicatorColor="#3F51B5"
-                app:trackColor="#FDFDFD"
+                android:progressBackgroundTint="#368f8b"
+                app:indicatorColor="#368f8b"
+                app:trackColor="#dce1de"
                 app:trackCornerRadius="4dp"
                 app:trackThickness="8dp" />
         </LinearLayout>
@@ -72,15 +74,27 @@
             android:id="@+id/question_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#3F51B5"
+            android:background="#D5141212"
             android:fontFamily="@font/alata"
             android:padding="16dp"
-            android:textColor="?android:attr/textColorPrimaryInverse"
+            android:textColor="#dce1de"
             android:textIsSelectable="true"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:text="What is the largest planet in our solar system?" />
+
     </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/progressSpinner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <RadioGroup
         android:id="@+id/options_radio_group"
@@ -90,17 +104,5 @@
         android:orientation="vertical"
         android:showDividers="middle"
         app:layout_constraintTop_toBottomOf="@id/question_card" />
-
-    <com.google.android.material.progressindicator.CircularProgressIndicator
-        android:id="@+id/loading_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
